@@ -31,8 +31,11 @@ gulp.task('dev', cb => {
     publicPath: config.output.publicPath
   }));
   app.use(require('webpack-hot-middleware')(compiler));
-  app.get('*', function(req, res) {
+  app.get('/pages/index.html', function(req, res) {
     res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+  });
+  app.get('/pages/demo.html', function(req, res) {
+    res.sendFile(path.join(__dirname, 'pages', 'demo.html'));
   });
   app.listen(3000, 'localhost', function(err) {
     if (err) {

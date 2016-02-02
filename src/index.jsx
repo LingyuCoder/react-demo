@@ -83,7 +83,7 @@ class Blog extends React.Component {
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path="/" component={Blog}>
+    <Route path="/pages/index.html" component={Blog}>
       <Route path="index" components={{ content: IndexRoute }}></Route>
       <Route path="demo/:demo" components={{ content: DemoRoute }}></Route>
     </Route>

@@ -14,6 +14,10 @@ module.exports = {
     index: [
       'webpack-hot-middleware/client',
       './src/index.jsx'
+    ],
+    demo: [
+      'webpack-hot-middleware/client',
+      './src/demo.jsx'
     ]
   },
   output: {
